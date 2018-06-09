@@ -86,6 +86,7 @@
         msg.text = text;
 
         //msg.voice = "Google español";
+	msg.lang = "es-ES";
 
   	// Queue this utterance.
         window.speechSynthesis.speak(msg);
@@ -101,6 +102,7 @@
             var recognizer = new window.SpeechRecognition();
             var transcription = document.getElementById('transcription');
             var log = document.getElementById('log');
+	    recognizer.lang = "es-ES";
 
             // Recogniser doesn't stop listening even if the user pauses
             recognizer.continuous = true;
